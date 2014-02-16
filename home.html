@@ -1,0 +1,46 @@
+<script type="text/template" id="body_layout">
+   <% if(data.viewType == ViewType.LIST) { %>
+       <table id="items_list">
+           <% _.each(data.body_items, function(item, key, list) {
+               var id = "body_item"; %>
+               <tr>
+                   <td id="<%= id %>"><%= item.primaryText %></td>
+               </tr>
+           <% }); %>
+       </table>
+   <% } %>
+</script>
+
+
+
+<script type="text/template" id="headerbar_layout">
+    <% if(data.hasHeader) { %>
+        <table id="headerbar">
+            <tr>
+            <% _.each(data.header_items, function(item, key, list) {
+                var id = "header_item"; %>
+                <td id="<%= id %>"><%= item.title %></span>
+            <% }); %>
+            </tr>
+        </table>
+    <% } %>
+</script>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>GitHubber</title>
+    </head>
+    <body>
+    <div id="mainApp">
+        <div id="headerbar"></div>
+        <div id="body"></div>
+    </div>
+    <script type="text/javascript" src="underscore.js"></script>
+    <script type="text/javascript" src="jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="backbone-min.js"></script>
+    <script type="text/javascript" src="gh3.js"></script>
+    <script type="text/javascript" src="router/workspace-router.js"></script>
+    <script type="text/javascript" src="utilities/utils.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>

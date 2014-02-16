@@ -1,21 +1,34 @@
 var mainApp = function() {
-    var data = {};
+    var headerData = {};
 
-    data.hasHeader = true;
-    data.header_items = [
+    headerData.hasHeader = true;
+    headerData.header_items = [
         {title: "Repositories"},
         {title: "Starred"},
         {title: "Recent Activity"},
         {title: "Profile"}
     ];
 
-    data.viewType = ViewType.LIST;
-    data.body_items = [
-        {primaryText: "Item1"},
-        {primaryText: "Item2"}
-    ];
+    TemplateEngine.render("#headerbar_layout", "#headerbar", {data: headerData});
 
-    TemplateEngine.render("#layout", "#mainApp", {data: data});
+    var bodyData = {};
+    bodyData.viewType = ViewType.LIST;
+
+    var user = new Gh3.User("ershadmoi");
+    var gh3UserCallback = function(err, resUser) {
+
+        if(err) {
+            throw "fetch failed";
+        }
+
+        bodyData.body_items = [
+            {primaryText: resUser.avatar_url}
+        ];
+
+        TemplateEngine.render("#body_layout", "#body", {data: bodyData});
+    };
+
+    user.fetch(gh3UserCallback); 
 };
 
 mainApp();

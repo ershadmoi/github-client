@@ -1,0 +1,15 @@
+<script type="text/template" id="body_layout">
+   <% if(data.viewType == ViewType.LIST) { %>
+       <table id="items_list">
+           <% _.each(data.body_items, function(item, key, list) {
+               var id = "body_item"; %>
+               <tr>
+                   <td id="<%= id %>"><%= item.primaryText %></td>
+               </tr>
+           <% }); %>
+       </table>
+   <% } %>
+</script>
+
+
+

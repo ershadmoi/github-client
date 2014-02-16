@@ -1,0 +1,12 @@
+<script type="text/template" id="headerbar_layout">
+    <% if(data.hasHeader) { %>
+        <table id="headerbar">
+            <tr>
+            <% _.each(data.header_items, function(item, key, list) {
+                var id = "header_item"; %>
+                <td id="<%= id %>"><%= item.title %></span>
+            <% }); %>
+            </tr>
+        </table>
+    <% } %>
+</script>

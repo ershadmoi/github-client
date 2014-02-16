@@ -1,7 +1,7 @@
 {
   "name": "GitHubber",
   "description": "A github client",
-  "launch_path": "/index.html",
+  "launch_path": "/home.html",
   "icons": {
     "128": "/icons/github-128.png"
   },

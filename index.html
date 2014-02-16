@@ -3,32 +3,11 @@
         <meta charset="utf-8">
         <title>GitHubber</title>
     </head>
-
-    <script type="text/template" id="layout">
-        <% if(data.hasHeader) { %>
-            <div id="headerbar">
-                <% _.each(data.header_items, function(item, key, list) { %>
-                    <% var spanid = "header_item"; %>
-                    <span id="<%= spanid %>"><%= item.title %></span>
-                <% }); %>
-            </div>
-        <% } %>
-        <div id="body">
-            <% if(data.viewType == ViewType.LIST) { %>
-                <table id="items_list">
-                    <% _.each(data.body_items, function(item, key, list) {
-                        var id = "body_item"; %>
-                        <tr>
-                            <td id="<%= id %>"><%= item.primaryText %></td>
-                        </tr>
-                    <% }); %>
-                </table>
-            <% } %>
-        </div>
-    </script>
-
     <body>
-    <div id="mainApp"></div>
+    <div id="mainApp">
+        <div id="headerbar"></div>
+        <div id="body"></div>
+    </div>
     <script type="text/javascript" src="underscore.js"></script>
     <script type="text/javascript" src="jquery-1.7.2.js"></script>
     <script type="text/javascript" src="backbone-min.js"></script>
