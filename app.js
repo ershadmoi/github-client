@@ -12,10 +12,10 @@ var mainApp = function() {
     data.viewType = ViewType.LIST;
     data.body_items = [
         {primaryText: "Item1"},
-        {primaryText: "Item2}
+        {primaryText: "Item2"}
     ];
 
-    TemplateEngine.render("layout", "mainApp", data);
+    TemplateEngine.render("#layout", "#mainApp", {data: data});
 };
 
 mainApp();
