@@ -1,5 +1,6 @@
-firefoxOS-github-client
+GitHubber 
 ============
+firefoxOS-github-client
 
 A github client app for firefox os built on top of the Gh3 library 
 
