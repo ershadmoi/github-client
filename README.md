@@ -1,4 +1,4 @@
-github-client
-=============
+RedditReader
+============
 
-A github client for firefox os
+Firefox App

@@ -1,0 +1,17 @@
+{
+  "name": "GitHub-Reader",
+  "description": "A github client",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/icons/github-128.png"
+  },
+  "developer": {
+    "name": "ershadmoi",
+    "url": "http://twitter.com/ershadmoi"
+  },
+  "default_locale": "en",
+  "appcache_path": "/cache.manifest",
+  "orientation": ["portrait","landscape-secondary"],
+  "origin": "app://com.ershadmoi.github.client",
+  "type": "web"
+}
